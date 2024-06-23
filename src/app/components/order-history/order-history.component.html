@@ -1,0 +1,25 @@
+<h1>Orders</h1>
+<table>
+    <tr>
+        <th>Description</th>
+        <th>Restaurant</th>
+        <th>Rating</th>
+        <th>Order Again?</th>
+    </tr>
+@for (o of allOrders; track o.id) {
+    <tr>
+        <td>{{o.description}}</td>
+        <td>{{o.restaurant}}</td>
+        <td>{{o.rating}}</td>
+        @if (o.orderAgain == true) {
+            <td>✓</td>
+        }@else{
+            <td></td>
+        }
+        <button (click)="deleteOrder(o)">Delete</button>
+
+    </tr>
+}    
+</table>
+
+<app-add-order-form (addEvent)="addOrder($event)"></app-add-order-form>

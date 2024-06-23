@@ -1,0 +1,11 @@
+<h1>Add Order</h1>
+
+<input type="text" [(ngModel)]="formOrder.description" placeholder="Enter Description">
+
+<input type="text" [(ngModel)]="formOrder.restaurant" placeholder="Enter Restaurant">
+
+<input type="number" [(ngModel)]="formOrder.rating" placeholder="Enter Rating">
+
+<label>Order Again?</label>
+<input type="checkbox" value="true" [(ngModel)]="formOrder.rating" name="form">
+<button (click)="emitAdd()">Add Order</button>
