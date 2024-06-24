@@ -4,8 +4,8 @@
 
 <input type="text" [(ngModel)]="formOrder.restaurant" placeholder="Enter Restaurant">
 
-<input type="number" [(ngModel)]="formOrder.rating" placeholder="Enter Rating">
+<input type="number" min="0" max="5" [(ngModel)]="formOrder.rating" placeholder="Enter Rating">
 
 <label>Order Again?</label>
-<input type="checkbox" value="true" [(ngModel)]="formOrder.rating" name="form">
+<input type="checkbox" value="true" [(ngModel)]="formOrder.orderAgain" name="form">
 <button (click)="emitAdd()">Add Order</button>
